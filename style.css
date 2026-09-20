@@ -1,0 +1,457 @@
+
+/* ---------- Base styles ---------- */
+
+:root {
+    --bg: #141A1B;
+    --surface: #202827;
+    --surface-hover: #293331;
+    --amber: #E9B66D;
+    --mint: #A9D9C0;
+    --text: #F4F1E9;
+    --muted: #B7C1BC;
+    --border: #394541;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    padding: 32px;
+}
+
+/* ---------- Header ---------- */
+
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    max-width: none;
+    margin: -32px -32px 0;
+    padding: 18px 32px;
+
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand h1 {
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+}
+
+.brand p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* ---------- Pixel firefly placeholder ---------- */
+
+.firefly {
+    color: var(--amber);
+    font-size: 2rem;
+    text-shadow: 0 0 12px #E9B66D66;
+    animation: firefly-float 2.5s ease-in-out infinite;
+}
+
+@keyframes firefly-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ---------- Greeting ---------- */
+
+.welcome-section {
+    max-width: 1100px;
+    margin: 48px auto 32px;
+}
+
+.welcome-section h2 {
+    color: var(--mint);
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.welcome-section p {
+    color: var(--muted);
+}
+
+/* ---------- Language selection ---------- */
+
+.language-screen {
+    max-width: 1100px;
+    margin: 32px auto;
+}
+
+.language-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.language-box h2 {
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+.language-box p {
+    color: var(--muted);
+}
+
+.language-box label {
+    color: var(--mint);
+    font-weight: 600;
+}
+
+select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font: inherit;
+    min-width: 180px;
+}
+
+/* ---------- Practice cards ---------- */
+
+.practice-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.practice-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition:
+        transform 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease;
+}
+
+.coding-card {
+    border-top: 3px solid var(--amber);
+}
+
+.interview-card {
+    border-top: 3px solid var(--mint);
+}
+
+.practice-card:hover {
+    transform: translateY(-4px);
+    background: var(--surface-hover);
+}
+
+.coding-card:hover {
+    border-color: var(--amber);
+}
+
+.interview-card:hover {
+    border-color: var(--mint);
+}
+
+.card-tag {
+    color: var(--amber);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.interview-card .card-tag {
+    color: var(--mint);
+}
+
+.practice-card h2 {
+    font-size: 1.6rem;
+}
+
+.practice-card > p {
+    color: var(--muted);
+    flex-grow: 1;
+}
+
+/* ---------- Progress ---------- */
+
+.progress-area {
+    margin-top: 12px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.progress-label span:first-child {
+    color: var(--muted);
+}
+
+.progress-label span:last-child {
+    color: var(--text);
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background: #394541;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--amber);
+    border-radius: inherit;
+    transition: width 300ms ease;
+}
+
+.interview-card .progress-fill {
+    background: var(--mint);
+}
+
+/* ---------- Buttons ---------- */
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 18px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 150ms ease,
+        filter 150ms ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.practice-button {
+    margin-top: 8px;
+    background: var(--amber);
+    color: #141A1B;
+}
+
+.interview-card .practice-button {
+    background: var(--mint);
+}
+
+/* ---------- Responsive layout ---------- */
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    .brand h1 {
+        font-size: 2rem;
+    }
+
+    .brand p {
+        font-size: 0.85rem;
+    }
+
+    .welcome-section {
+        margin-top: 32px;
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .practice-card {
+        padding: 22px;
+    }
+
+    .language-box {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #answer-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Reduced motion support ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#coding-screen:not(.hidden) {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 24px;
+    gap: 16px;
+}
+
+#question-container {
+    width: min(90%, 700px);
+    box-sizing: border-box;
+    margin: 24px auto;
+    padding: 40px;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    background: #171c2b;
+    border: 1px solid #343b50;
+    border-left: 5px solid #f5b942;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+#question-container h3 {
+    font-size: 1.8rem;
+}
+
+#question-container pre {
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 20px;
+    overflow-x: auto;
+    background: #0d111c;
+    border: 1px solid #292f40;
+    border-radius: 10px;
+    padding: 24px;
+    line-height: 1.8;
+}
+
+#back-button {
+    align-self: flex-start;
+    order: -1;
+}
+
+.question-label {
+    display: inline-block;
+    color: #f5b942;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+#answer-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+}
+
+#answer-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    background: #202638;
+    border: 1px solid #343b50;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+#answer-options input {
+    flex-shrink: 0;
+}
+
+#question-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#hint-text {
+    margin-top: 16px;
+    padding: 14px;
+    background: #202638;
+    border-left: 4px solid #f5b942;
+    border-radius: 8px;
+}
+
+#feedback {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+#result-view {
+    text-align: left;
+}
+
+#result-title {
+    color: #9be7c4;
+    font-size: 2rem;
+}
+
+#correct-answer {
+    background: #202638;
+    border-left: 4px solid #9be7c4;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#next-button {
+    margin-top: 20px;
+}
