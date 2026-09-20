@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelLogic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- First-visit language selection -->
+    <section id="language-screen" class="language-screen">
+        <div class="language-box">
+            <div class="firefly" aria-hidden="true">✦</div>
+
+            <h2>Let's personalize your practice!</h2>
+            <p>Which programming language do you prefer?</p>
+
+            <label for="language-select">Choose your language</label>
+            <select id="language-select">
+                <option value="">Select a language</option>
+                <option value="cpp">C++</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="javascript">JavaScript</option>
+                <option value="c">C</option>
+                <option value="csharp">C#</option>
+            </select>
+
+            <button id="start-button">Let's begin →</button>
+        </div>
+    </section>
+
+    <!-- Main homepage -->
+    <main id="home-screen" class="home-screen hidden">
+
+        <header class="site-header">
+            <div class="brand">
+                <span class="firefly" aria-hidden="true">✦</span>
+                <div>
+                    <h1>LevelLogic</h1>
+                    <p>Practice programming. Build logic. Grow one level at a time.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <h2 id="greeting">Ready to level up?</h2>
+            <p id="welcome-message">
+                Choose your practice path and keep building your programming skills.
+            </p>
+        </section>
+
+        <section id="practice-grid" class="practice-grid" aria-label="Practice options">
+
+            <article class="practice-card coding-card">
+                <span class="card-tag">01 · Predict</span>
+                <h2>Coding Practice</h2>
+                <p>
+                    Predict what a code snippet does, reveal the explanation,
+                    and follow the logic.
+                </p>
+
+                <div class="progress-area">
+                    <div class="progress-label">
+                        <span>Progress</span>
+                        <span id="coding-progress-text">Level 1 · Not started</span>
+                    </div>
+                    <div class="progress-track">
+                        <div id="coding-progress-bar" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <button id="coding-button" class="practice-button">
+                    Let's Practice →
+                </button>
+            </article>
+
+            <article class="practice-card interview-card">
+                <span class="card-tag">02 · Explain</span>
+                <h2>Interview Practice</h2>
+                <p>
+                    Practice explaining concepts, code, and your technical reasoning.
+                </p>
+
+                <div class="progress-area">
+                    <div class="progress-label">
+                        <span>Progress</span>
+                        <span id="interview-progress-text">Level 1 · Not started</span>
+                    </div>
+                    <div class="progress-track">
+                        <div id="interview-progress-bar" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <button id="interview-button" class="practice-button">
+                    Let's Practice →
+                </button>
+            </article>
+
+        </section>
+    </main>
+   <!-- Coding Practice screen -->
+<section id="coding-screen" class="hidden">
+    <h2>Coding Practice</h2>
+    <p>Get ready to predict what the code does!</p>
+
+    <div id="question-container">
+        <!--QUESTION CONTENT-->
+        <div id="question-content">
+            <!-- Keep your existing question, options, and buttons here -->
+            
+            <span class="question-label">PREDICT THE OUTPUT</span>
+
+            <h3>Question 1</h3>
+            <p>What will this code print?</p>
+
+            <pre><code>int x = 5;
+            cout << x + 2;</code></pre>
+
+            <div id="answer-options">
+                <label>
+                    <input type="radio" name="answer" value="5">
+                    5
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="7">
+                    7
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="10">
+                    10
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="12">
+                    12
+                </label>
+            </div>
+
+            <div id="question-actions">
+                <button id="reveal-button">Explanation</button>
+                <button id="hint-button">💡 Hint</button>
+                <button id="submit-button">Submit Answer</button>
+    
+            </div>
+
+            <p id="hint-text" class="hidden">
+                Hint: Think about the value stored in x, then add 2 to it.
+            </p>
+
+            <div id="explanation" class="hidden">
+                <h4>Explanation</h4>
+                <p>The variable <code>x</code> stores 5. The expression <code>x + 2</code> adds 2 to it, so the output is 7.</p>
+            </div>
+
+            <p id="feedback"></p>
+
+        </div>
+
+        <div id="result-view" class="hidden">
+            <h2 id="result-title">Result</h2>
+            <p id="correct-answer"></p>
+            <h3>Explanation</h3>
+            <p id="result-explanation"></p>
+
+            <button id="next-button">Next Question →</button>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    
+</div>
+
+    <button id="back-button">← Back to Home</button>
+</section>
+
+    <!-- Interview Practice screen -->
+    <section id="interview-screen" class="hidden">
+        <h2>Interview Practice</h2>
+        <p>Get ready to explain your programming concepts!</p>
+
+        <button id="interview-back-button">← Back to Home</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
