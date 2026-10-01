@@ -1,0 +1,200 @@
+[
+  {
+    "language": "cpp",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What will this code print?",
+        "code": "int x = 10;\ncout << x + 5;",
+        "options": [
+          "16",
+          "12",
+          "\"15\"",
+          "15"
+        ],
+        "answer": "15",
+        "hint": "Consider the value of x and add 5 to it.",
+        "explanation": "x stores 10. Adding 5 to x gives 15."
+      },
+      {
+        "id": 2,
+        "question": "What will this code print?",
+        "code": "int x = 5;\nx = 10;\ncout << x;",
+        "options": [
+          "5",
+          "10",
+          "15",
+          "Error"
+        ],
+        "answer": "10",
+        "hint": "Think about reassigning a variable.",
+        "explanation": "x is initially 5, but it is reassigned to 10 before it is printed."
+      }
+    ]
+   },
+   {
+        "language": "python",
+        "questions": [
+        {
+            "id": 1,
+            "question": "What will this code print?",
+            "code": "name = \"Lily\"\nprint(\"Hello\", name)",
+            "options": [
+                "HelloLily",
+                "Hello Lily",
+                "Hello name",
+                "Hello, Lily"
+            ],
+            "answer": "Hello Lily",
+            "hint": "Look at what name stores, then see what is printed with Hello.",
+            "explanation": "Python's print function separates its arguments with a space, so the output is Hello Lily."
+        },
+        {
+            "id": 2,
+            "question": "What will this code print?",
+            "code": "numbers = [1, 2, 3]\nprint(numbers[1])",
+            "options": [
+                 "1",
+                "2",
+                "3",
+                "[1]"
+            ],
+            "answer": "2",
+            "hint": "Think about indexing.",
+            "explanation": "Python lists use zero-based indexing. numbers[0] is 1, numbers[1] is 2, so the output is 2."
+        }
+        ]
+    },
+        {
+  "language": "java",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What will this code print?",
+      "code": "int x = 5;\nx++;\nSystem.out.println(x);",
+      "options": [
+        "5",
+        "6",
+        "x",
+        "4"
+      ],
+      "answer": "6",
+      "hint": "What does x++ do to x = 5?",
+      "explanation": "The post-increment operator x++ increases x by 1. Since x starts at 5, it becomes 6."
+    },
+    {
+      "id": 2,
+      "question": "What will this code print?",
+      "code": "String name = \"Lily\";\n\nif (name.equals(\"Lily\")) {\n    System.out.println(\"Hello\");\n} else {\n    System.out.println(\"Hi\");\n}",
+      "options": [
+        "Hello",
+        "Hi",
+        "Lily",
+        "Error"
+      ],
+      "answer": "Hello",
+      "hint": "Check if the condition is true or false.",
+      "explanation": "name contains \"Lily\". The equals() method checks whether the two strings have the same content, so the condition is true and Hello is printed."
+    }
+  ]
+},
+    {
+  "language": "javascript",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What will this code print?",
+      "code": "let x = 5;\n\nif (x === \"5\") {\n    console.log(\"Same\");\n} else {\n    console.log(\"Different\");\n}",
+      "options": [
+        "Same",
+        "Different",
+        "5",
+        "Error"
+      ],
+      "answer": "Different",
+      "hint": "Think about what === checks besides the value.",
+      "explanation": "=== is strict equality. It checks both value and data type. x is a number while \"5\" is a string, so the condition is false."
+    },
+    {
+      "id": 2,
+      "question": "What will this code print?",
+      "code": "let fruits = [\"Apple\", \"Mango\", \"Banana\"];\nconsole.log(fruits[2]);",
+      "options": [
+        "Apple",
+        "Mango",
+        "Banana",
+        "2"
+      ],
+      "answer": "Banana",
+      "hint": "JavaScript arrays use zero-based indexing.",
+      "explanation": "Array indexing starts at 0. fruits[0] is Apple, fruits[1] is Mango, and fruits[2] is Banana."
+    }
+  ]
+},
+    {
+  "language": "c",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What will this code print?",
+      "code": "char grade = 'A';\n\nprintf(\"%d\", grade);",
+      "options": [
+        "A",
+        "65",
+        "97",
+        "Error"
+      ],
+      "answer": "65",
+      "hint": "Remember that %d prints an integer value. Think about the ASCII value of 'A'.",
+      "explanation": "%d prints the integer representation of the character. In ASCII, 'A' has the value 65."
+    },
+    {
+      "id": 2,
+      "question": "What will this code print?",
+      "code": "int x = 10;\nint *p = &x;\n\nprintf(\"%d\", *p);",
+      "options": [
+        "10",
+        "Address of x",
+        "0",
+        "Error"
+      ],
+      "answer": "10",
+      "hint": "p points to x. What does *p give you?",
+      "explanation": "p stores the address of x. Dereferencing p with *p gives the value stored at that address, which is 10."
+    }
+  ]
+},
+    {
+  "language": "csharp",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What will this code print?",
+      "code": "int x = 10;\n\nConsole.WriteLine(x++ + ++x);",
+      "options": [
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "answer": "22",
+      "hint": "Trace what happens to x from left to right. Remember the difference between x++ and ++x.",
+      "explanation": "x++ uses 10 and then increases x to 11. ++x then increases x to 12 and uses 12. Therefore, 10 + 12 equals 22."
+    },
+    {
+      "id": 2,
+      "question": "What will this code print?",
+      "code": "int a = 5;\nint b = 2;\n\nConsole.WriteLine(a / b);",
+      "options": [
+        "2.5",
+        "2",
+        "3",
+        "Error"
+      ],
+      "answer": "2",
+      "hint": "Both a and b are integers. Think about what happens when you divide two integers in C#.",
+      "explanation": "Both operands are integers, so C# performs integer division. The fractional part is discarded, making 5 / 2 equal to 2."
+    }
+  ]
+}
+]

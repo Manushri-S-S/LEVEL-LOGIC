@@ -10,6 +10,15 @@ const questionContent = document.getElementById("question-content");
 const resultView = document.getElementById("result-view");
 const revealButton = document.getElementById("reveal-button");
 
+async function loadQuestions() {
+    const res = await fetch("questions.json");
+    const data = await res.json();
+
+    console.log(data);
+}
+
+loadQuestions();
+
 revealButton.addEventListener("click", function () {
     document.getElementById("explanation").classList.remove("hidden");
 });
