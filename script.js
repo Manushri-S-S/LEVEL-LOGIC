@@ -15,9 +15,20 @@ async function loadQuestions() {
     const data = await res.json();
 
     console.log(data);
+
+    const cpp = data.find((item) => {
+    return item.language === "cpp";
+    
+});
+
+console.log(cpp);
 }
 
 loadQuestions();
+
+
+
+
 
 revealButton.addEventListener("click", function () {
     document.getElementById("explanation").classList.remove("hidden");
